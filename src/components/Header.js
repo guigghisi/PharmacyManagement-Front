@@ -12,6 +12,9 @@ export default function Header() {
           />
           PharmacyManagement
         </a>
+        <button type="button" class="btn btn-primary">
+          Login
+        </button>
       </div>
     </nav>
   );
