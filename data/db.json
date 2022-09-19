@@ -1,0 +1,19 @@
+{
+    "farmacias": [
+        {
+            "id": "abc",
+            "nome": "Farmacia 1",
+            "endereco": "Rua 1",
+            "latitude": 1.0,
+            "longitude": 1.0
+        }
+            ],
+            "medicamentos": [
+                {
+                    "id": "abc",
+                    "nome": "Medicamento 1",
+                    "preco": 1.0,
+                    "quantidade": 1
+                }
+            ]
+}
