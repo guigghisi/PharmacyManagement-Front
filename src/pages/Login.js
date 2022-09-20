@@ -17,14 +17,14 @@ export default function Login() {
     console.log(regex.test(senha));
     console.log(senha);
     if (email.length === 0) {
-      return false, alert("Preencha o email");
+      return (false, alert("Preencha o email"));
     } else if (senha.length === 0) {
-      return false, alert("Preencha a senha");
+      return (false, alert("Preencha a senha"));
     } else if (!regex.test(senha)) {
-      return false, alert("A senha deve conter letras e números");
+      return (false, alert("A senha deve conter letras e números"));
     }
     UsuarioContext.setAuth(true);
-    return true, alert("Logado com sucesso");
+    return (true, alert("Logado com sucesso"));
   }
 
   return (
