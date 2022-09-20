@@ -12,7 +12,13 @@ export default function Header() {
           />
           PharmacyManagement
         </a>
-        <button type="button" class="btn btn-primary">
+        <button
+          type="button"
+          class="btn btn-primary"
+          onClick={() => {
+            window.location.href = "/login";
+          }}
+        >
           Login
         </button>
       </div>
