@@ -1,5 +1,5 @@
 import { Rotas } from "./routes/Rotas";
-import { UsuarioProvider } from "./context/Auth";
+import { UsuarioProvider } from "./context/auth.js";
 import Header from "./components/Header";
 function App() {
   return (

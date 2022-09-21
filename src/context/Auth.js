@@ -14,4 +14,4 @@ const UsuarioProvider = ({ children }) => {
 
 const useAutenticado = () => useContext(UsuarioContext);
 
-export { UsuarioProvider, useAutenticado };
+export { UsuarioProvider, useAutenticado, UsuarioContext };

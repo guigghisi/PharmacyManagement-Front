@@ -1,25 +1,22 @@
 import { useState } from "react";
-import { useAutenticado } from "../context/Auth";
+import { useNavigate } from "react-router-dom";
+import { useAutenticado } from "../context/auth.js";
 export default function Login() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const { setAuth } = useAutenticado();
-
+  const navigate = useNavigate();
   const regex = new RegExp("^(?=.*([A-Za-z]{1,}))(?=.*[0-9]{1,}).{8,100}$");
   function logar(event) {
-    if (validarForm(event) === true) {
-      console.log(email, senha);
-      console.log("logar");
+    event.preventDefault();
+    if (validarForm() === true) {
       setAuth(true);
-
-      window.location.href = "/Mapa";
-      event.preventDefault();
+      navigate("/mapa");
     }
   }
 
-  function validarForm(event) {
-    event.preventDefault();
-    console.log(regex.test(senha));
+  function validarForm() {
+    console.log("alou" + regex.test(senha));
     console.log(senha);
     if (email.length === 0) {
       alert("Preencha o email");
