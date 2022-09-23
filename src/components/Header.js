@@ -1,14 +1,13 @@
 import { useAutenticado } from "../context/auth.js";
 import { useNavigate } from "react-router-dom";
-
 export default function Header() {
-
   const { useAuth } = useAutenticado();
+  const navigate = useNavigate();
   if (useAuth) {
     return (
       <nav class="navbar navbar-dark " style={{ backgroundColor: "#06281E" }}>
         <div class="container-fluid">
-          <a class="navbar-brand" href="/">
+          <span class="navbar-brand" >
             <img
               src="https://pbs.twimg.com/media/C4puoESW8AE98a4.jpg"
               alt="Logo"
@@ -17,12 +16,40 @@ export default function Header() {
               class="d-inline-block align-text-top"
             />
             PharmacyManagement
-          </a>
+          </span>
 
-          <button class="btn btn-primary">Cadastrar Farmácia</button>
-          <button class="btn btn-primary">Cadastrar Medicamentos</button>
-          <button class="btn btn-primary">Medicamentos</button>
-          <button class="btn btn-primary">Mapa</button>
+          <button
+            class="btn btn-primary"
+            onClick={() => {
+              navigate("/CadastroFarmacia");
+            }}
+          >
+            Cadastrar Farmácia
+          </button>
+          <button
+            class="btn btn-primary"
+            onClick={() => {
+              navigate("/CadastroProduto");
+            }}
+          >
+            Cadastrar Medicamentos
+          </button>
+          <button
+            class="btn btn-primary"
+            onClick={() => {
+              navigate("/Medicamentos");
+            }}
+          >
+            Medicamentos
+          </button>
+          <button
+            class="btn btn-primary"
+            onClick={() => {
+              navigate("/Mapa");
+            }}
+          >
+            Mapa
+          </button>
           <button
             type="button"
             class="btn btn-danger"
@@ -39,7 +66,7 @@ export default function Header() {
     return (
       <nav class="navbar navbar-dark " style={{ backgroundColor: "#06281E" }}>
         <div class="container-fluid">
-          <a class="navbar-brand" href="/">
+          <span class="navbar-brand">
             <img
               src="https://pbs.twimg.com/media/C4puoESW8AE98a4.jpg"
               alt="Logo"
@@ -48,12 +75,12 @@ export default function Header() {
               class="d-inline-block align-text-top"
             />
             PharmacyManagement
-          </a>
+          </span>
           <button
             type="button"
             class="btn btn-primary"
             onClick={() => {
-              window.location.href = "/login";
+              navigate("/login");
             }}
           >
             Login
