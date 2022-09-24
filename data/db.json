@@ -1,38 +1,38 @@
 {
   "farmacias": [
     {
-      "razao": "aaaaaaaa",
-      "email": "guilhermeghisi14@gmail.com",
-      "nome": "guilherme ghisi",
-      "telefone": "+5548998017717",
       "cep": "88704761",
+      "nome": "guilherme ghisi",
+      "email": "guilhermeghisi14@gmail.com",
+      "telefone": "+5548998017717",
       "endereco": "Avenida Expedicionário José Pedro Coelho",
       "bairro": "Revoredo",
       "cidade": "Tubarão",
       "estado": "SC",
+      "razao": "aaaaaaaaaaaaaaaaaaaaaaaa",
       "cnpj": "aaaaaaaaaaaaaa",
-      "celular": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "celular": "aaaaaaaaaaaaaaaaaaaaaaaaa",
       "numero": "1557",
-      "latitude": "-29.471488",
-      "longitude": "-49.014132",
-      "id": "yhX8GE8"
-    },
-    {
-      "email": "guilhermeghisi14@gmail.com",
-      "nome": "guilherme ghisi",
-      "telefone": "+5548998017717",
-      "cep": "88708040",
-      "endereco": "Rua Jaime Aguiar de Souza",
-      "bairro": "Humaitá de Cima",
-      "cidade": "Tubarão",
-      "estado": "SC",
-      "razao": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-      "cnpj": "aaaaa222222222",
-      "celular": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-      "numero": "557",
       "latitude": "-28.471488",
       "longitude": "-49.014132",
-      "id": "jDrDW8W"
+      "id": "C33R9zs"
+    },
+    {
+      "cep": "89812000",
+      "endereco": "Avenida Getúlio Dorneles Vargas - S",
+      "bairro": "Centro",
+      "cidade": "Chapecó",
+      "estado": "SC",
+      "razao": "bbbbbbbbbbbbbbbbbbbbbbbb",
+      "email": "bbbb@bbbbbbbb",
+      "cnpj": "bbbbbbbbbbbbbb",
+      "nome": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "telefone": "bbbbbbbbb",
+      "celular": "bbbbbbbbbbbbbbbbbbbbbbb",
+      "numero": "575",
+      "latitude": "-27.0922364",
+      "longitude": "-52.6166878",
+      "id": "HlgFu4e"
     }
   ]
 }

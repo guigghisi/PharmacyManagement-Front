@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Header from "../components/Header.js";
 export default function Mapa() {
   const [farmacias, setFarmacias] = useState([]);
-
+  const whats = `https://wa.me/55${farmacias.celular}`;
   useEffect(() => {
     fetch("http://localhost:3001/farmacias")
       .then((response) => response.json())
@@ -16,7 +16,7 @@ export default function Mapa() {
       <Header />
       <MapContainer
         center={position}
-        zoom={8}
+        zoom={7}
         scrollWheelZoom={true}
         style={{ height: "90vh", width: "98vw" }}
       >
@@ -30,9 +30,15 @@ export default function Mapa() {
             key={farmacia.id}
           >
             <Popup>
-              <h3>{farmacia.nome}</h3>
-              <p>{farmacia.endereco}</p>
-              <p>{farmacia.telefone}</p>
+              <p>Razão Social: {farmacia.razao}</p>
+              <p>CNPJ: {farmacia.cnpj}</p>
+              <p>Nome Fantasia: {farmacia.nome}</p>
+              <p>E-Mail: {farmacia.email}</p>
+              <p>Telefone: {farmacia.telefone}</p>
+              <p>
+                WhatsApp:
+                <a href={whats}>{farmacia.celular}</a>
+              </p>
             </Popup>
           </Marker>
         ))}

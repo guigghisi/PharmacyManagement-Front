@@ -6,10 +6,11 @@ import { useState } from "react";
 export default function CadastroFarmacia() {
   const [formulario, setFormulario] = useState({});
   const [resultado, setResultado] = useState(true);
+  const [cordenada, setCordenada] = useState(true);
+  const [cepPrenchido, setCepPrenchido] = useState(true);
   const handleSubmit = (event) => {
     event.preventDefault();
     try {
-      cordenadas();
       fetch("http://localhost:3001/farmacias", {
         method: "POST",
         headers: {
@@ -18,24 +19,11 @@ export default function CadastroFarmacia() {
         body: JSON.stringify(formulario),
       });
       alert("Cadastro realizado com sucesso!");
-    } catch (error) {
+    } catch {
       alert("Erro ao cadastrar!");
     }
   };
 
-  function cordenadas() {
-    fetch(
-      `https://nominatim.openstreetmap.org/search?road=${formulario.endereco}&city=${formulario.cidade}&state=${formulario.estado}&country=brazil&format=json&addressdetails=1&limit=1&polygon_svg=1`
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        setFormulario((prev) => ({
-          ...prev,
-          latitude: data[0].lat,
-          longitude: data[0].lon,
-        }));
-      });
-  }
   return (
     <div class="mb-3">
       <Header />
@@ -162,6 +150,7 @@ export default function CadastroFarmacia() {
                 onChange={(e) => {
                   setFormulario((prev) => ({ ...prev, cep: e.target.value }));
                   if (e.target.value.length === 8) {
+                    setCepPrenchido(false);
                     fetch(`https://viacep.com.br/ws/${e.target.value}/json/`)
                       .then((response) => response.json())
                       .then((data) => {
@@ -317,7 +306,8 @@ export default function CadastroFarmacia() {
           </div>
           <br />
           <div class="row ">
-            <div class="col-md-5">
+            <div class="col-md-4">
+             
               <input
                 value={formulario.latitude}
                 type="text"
@@ -326,7 +316,8 @@ export default function CadastroFarmacia() {
                 disabled
               />
             </div>
-            <div class="col-md-5">
+            <div class="col-md-4">
+
               <input
                 value={formulario.longitude}
                 type="text"
@@ -336,7 +327,38 @@ export default function CadastroFarmacia() {
               />
             </div>
             <div class="col">
-              <button type="submit" class="btn btn-primary">
+              <button
+                class="btn btn-primary"
+                disabled={cepPrenchido}
+                onClick={(e) => {
+                  try {
+                    e.preventDefault();
+                    fetch(
+                      `https://nominatim.openstreetmap.org/search?road=${formulario.endereco}&city=${formulario.cidade}&state=${formulario.estado}&country=brazil&format=json&addressdetails=1&limit=1&polygon_svg=1`
+                    )
+                      .then((response) => response.json())
+                      .then((data) => {
+                        setFormulario((prev) => ({
+                          ...prev,
+                          latitude: data[0].lat,
+                          longitude: data[0].lon,
+                        }));
+                        setCordenada(false);
+                      });
+                  } catch {
+                    alert("Endereço não encontrado");
+                  }
+                }}
+              >
+                Gerar Localização
+              </button>
+            </div>
+            <div class="col">
+              <button
+                type="submit"
+                class="btn btn-primary"
+                disabled={cordenada}
+              >
                 Cadastrar
               </button>
             </div>
