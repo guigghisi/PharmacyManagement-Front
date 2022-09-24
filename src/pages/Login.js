@@ -39,7 +39,7 @@ export default function Login() {
       <Header />
       <div class="container">
         <form onSubmit={logar}>
-          <label for="inputEmailLogin" class="form-label">
+          <label for="inputEmailLogin" class="formLabel">
             Endereço de email
           </label>
           <input
@@ -49,7 +49,7 @@ export default function Login() {
             placeholder="Digite seu email"
             onChange={(e) => setEmail(e.target.value)}
           />
-          <label for="inputSenhaLogin" class="form-label">
+          <label for="inputSenhaLogin" class="formLabel">
             Senha
           </label>
           <input
@@ -60,7 +60,9 @@ export default function Login() {
             minLength={8}
             onChange={(e) => setSenha(e.target.value)}
           />
-          <input type="submit" class="btn btn-primary" value="Entrar" />
+          <div class="d-flex align-items-end flex-column mb-3 ">
+            <input type="submit" class="btn btn-primary" value="Entrar" />
+          </div>
         </form>
       </div>
     </div>
