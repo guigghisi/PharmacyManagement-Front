@@ -1,8 +1,6 @@
 import Header from "../components/Header.js";
 import { useState } from "react";
 
-//https://nominatim.openstreetmap.org/search?road={formulario.endereco}&city={formulario.cidade}&state={formulario.estado}&country={formulario.pais}&format=json&addressdetails=1&limit=1&polygon_svg=1
-
 export default function CadastroFarmacia() {
   const [formulario, setFormulario] = useState({});
   const [resultado, setResultado] = useState(true);

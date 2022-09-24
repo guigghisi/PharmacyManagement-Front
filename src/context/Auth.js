@@ -3,7 +3,7 @@ import { useState, createContext, useContext } from "react";
 const UsuarioContext = createContext();
 
 const UsuarioProvider = ({ children }) => {
-  const [useAuth, setAuth] = useState(false);
+  const [useAuth, setAuth] = useState(true);
 
   return (
     <UsuarioContext.Provider value={{ useAuth, setAuth }}>

@@ -7,7 +7,7 @@ export default function Header() {
     return (
       <nav class="navbar navbar-dark " style={{ backgroundColor: "#06281E" }}>
         <div class="container-fluid">
-          <span class="navbar-brand" >
+          <span class="navbar-brand">
             <img
               src="https://pbs.twimg.com/media/C4puoESW8AE98a4.jpg"
               alt="Logo"
@@ -29,7 +29,7 @@ export default function Header() {
           <button
             class="btn btn-primary"
             onClick={() => {
-              navigate("/CadastroProduto");
+              navigate("/CadastroMedicamento");
             }}
           >
             Cadastrar Medicamentos

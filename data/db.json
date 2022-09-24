@@ -34,5 +34,32 @@
       "longitude": "-52.6166878",
       "id": "HlgFu4e"
     }
+  ],
+  "medicamentos": [
+    {
+      "nomeMed": "medicamento",
+      "nomeLab": "laboratorio",
+      "dosagem": "dosagem",
+      "preco": "valor",
+      "tipo": "controlado",
+      "id": "1oql9zR"
+    },
+    {
+      "nomeMed": "aaaaaaaaa",
+      "nomeLab": "aaaaaaaaa",
+      "dosagem": "aaaaaaaaa",
+      "preco": "aaaaaaaaa",
+      "tipo": "comum",
+      "id": "DvIEdO7"
+    },
+    {
+      "nomeMed": "aaaaaaaaa",
+      "nomeLab": "aaaaaaaaa",
+      "dosagem": "aaaaaaaaa",
+      "preco": "aaaaaaaaa",
+      "tipo": "comum",
+      "descricao": "fffffffffffffffffffffffffffffff",
+      "id": "Nuh_MC3"
+    }
   ]
 }
