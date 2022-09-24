@@ -5,6 +5,8 @@ export default function Home() {
     <div class="mb-3">
       <Header />
       <div className="container">
+        
+
         <h1>Home que vai conter as informações e afins</h1>
       </div>
     </div>
