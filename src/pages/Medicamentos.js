@@ -30,7 +30,14 @@ export default function Medicamentos() {
       <Header />
 
       <div class="container ">
-        <nav class="navbar bg-light">
+        <nav
+          class="navbar "
+          style={{
+            backgroundColor: "transparent",
+            paddingLeft: "4%",
+            paddingRight: "4%",
+          }}
+        >
           <div class="container-fluid">
             <span class="navbar-brand">Medicamentos</span>
             <form class="d-flex" role="search">

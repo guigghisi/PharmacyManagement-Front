@@ -2,10 +2,11 @@
   margin-top: 0.5rem;
 }
 body {
-  background-image: url("https://wallpaperboat.com/wp-content/uploads/2019/06/meme-16.jpg");
-
-  background-repeat: no-repeat;
+  background-image: url("https://media.istockphoto.com/vectors/vector-seamless-pattern-with-white-leaves-on-twigs-on-gray-background-vector-id1217009125?k=20&m=1217009125&s=612x612&w=0&h=BPIJIyUdOESYXebE79t_YcLfm6RVxEYibQaeSmH6rLA=");
 }
 .container {
-  background-color: aliceblue;
+  background-color: rgba(240, 248, 255, 0.904);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 1rem;
 }
