@@ -17,8 +17,6 @@ export default function Login() {
   }
 
   function validarForm() {
-    console.log("alou" + regex.test(senha));
-    console.log(senha);
     if (email.length === 0) {
       alert("Preencha o email");
       return false;
@@ -35,33 +33,33 @@ export default function Login() {
   }
 
   return (
-    <div class="mb-3">
+    <div className="mb-3">
       <Header />
-      <div class="container">
+      <div className="container">
         <form onSubmit={logar}>
-          <label for="inputEmailLogin" class="formLabel">
+          <label for="inputEmailLogin" className="formLabel">
             Endereço de email
           </label>
           <input
             type="email"
-            class="form-control"
+            className="form-control"
             id="inputEmailLogin"
             placeholder="Digite seu email"
             onChange={(e) => setEmail(e.target.value)}
           />
-          <label for="inputSenhaLogin" class="formLabel">
+          <label for="inputSenhaLogin" className="formLabel">
             Senha
           </label>
           <input
             type="password"
-            class="form-control"
+            className="form-control"
             id="inputSenhaLogin"
             placeholder="Digite sua senha"
             minLength={8}
             onChange={(e) => setSenha(e.target.value)}
           />
-          <div class="d-flex align-items-end flex-column mb-3 ">
-            <input type="submit" class="btn btn-primary" value="Entrar" />
+          <div className="d-flex align-items-end flex-column mb-3 ">
+            <input type="submit" className="btn btn-primary" value="Entrar" />
           </div>
         </form>
       </div>

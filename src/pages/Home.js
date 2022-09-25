@@ -4,10 +4,8 @@ export default function Home() {
   return (
     <div class="mb-3">
       <Header />
-      <div className="container">
-        
-
-        <h1>Home que vai conter as informações e afins</h1>
+      <div className="container text-center">
+        <h1>Bem Vindo ao Pharmacy Management</h1>
       </div>
     </div>
   );

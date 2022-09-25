@@ -10,7 +10,6 @@ export default function Mapa() {
       .then((data) => setFarmacias(data));
   }, []);
   const position = [-27.59627854569889, -48.53315487350991];
-  console.log(farmacias);
   return (
     <div class="mb-3">
       <Header />
@@ -18,7 +17,7 @@ export default function Mapa() {
         center={position}
         zoom={7}
         scrollWheelZoom={true}
-        style={{ height: "90vh", width: "98vw" }}
+        style={{ height: "92vh", width: "99vw" }}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

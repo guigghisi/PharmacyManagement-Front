@@ -9,7 +9,7 @@ export default function Header() {
         <div class="container-fluid">
           <span class="navbar-brand">
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBM3ofZaJ4RALO6WQSrrMaiW1ildnYAVfIn6e8ATrZy0NQ-bZpDed36y-vFIY8m5G8A28&usqp=CAU"
+              src="https://seeklogo.com/images/F/farmacia-logo-57EBC143C7-seeklogo.com.png"
               alt="Logo"
               width="30"
               height="24"
@@ -68,7 +68,7 @@ export default function Header() {
         <div class="container-fluid">
           <span class="navbar-brand">
             <img
-              src="https://pbs.twimg.com/media/C4puoESW8AE98a4.jpg"
+              src="https://seeklogo.com/images/F/farmacia-logo-57EBC143C7-seeklogo.com.png"
               alt="Logo"
               width="30"
               height="24"

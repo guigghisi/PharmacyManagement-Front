@@ -19,13 +19,6 @@ export default function card(props) {
       }
     });
   }
-  function temDescricao(descricao) {
-    if (descricao) {
-      return <p>Descrição: ${props.descricao}</p>;
-    } else {
-      return "";
-    }
-  }
   return (
     <div class="card" style={{ width: "18rem" }}>
       <img
@@ -35,7 +28,7 @@ export default function card(props) {
         onClick={() => {
           Swal.fire({
             title: props.nomeMed,
-            html: `<p>Laboratório: ${props.nomeLab}</p> <p>Dosagem: ${props.dosagem}</p> <p>Tipo: ${props.tipo}</p> <p>Preço: ${props.preco}</p> ${temDescricao}
+            html: `<p>Laboratório: ${props.nomeLab}</p> <p>Dosagem: ${props.dosagem}</p> <p>Tipo: ${props.tipo}</p> <p>Preço: ${props.preco}</p> <p>Descrição: ${props.descricao}</p>
            `,
             showCloseButton: true,
             showConfirmButton: false,
