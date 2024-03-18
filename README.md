@@ -1,6 +1,6 @@
 # PharmacyManagement-Front
 
-Esta é o Front-End para para gerenciamento de medicamentos e farmácias.
+Este é o Front-End para para gerenciamento de medicamentos e farmácias.
 
 ## 🚀 Como rodar o sistema
 
